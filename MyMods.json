@@ -1,0 +1,10 @@
+{
+  "id": "MyMods",
+  "name": "MyMods",
+  "author": [
+    ""
+  ],
+  "description": "My first Balatro mod.",
+  "prefix": "nwm",
+  "main_file": "main.lua"
+}
