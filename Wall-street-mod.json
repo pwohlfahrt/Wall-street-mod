@@ -1,10 +1,10 @@
 {
-  "id": "MyMods",
-  "name": "MyMods",
+  "id": "wall-street-mod",
+  "name": "Wall Street Mod",
   "author": [
     ""
   ],
   "description": "My first Balatro mod.",
-  "prefix": "nwm",
+  "prefix": "wall",
   "main_file": "main.lua"
 }
