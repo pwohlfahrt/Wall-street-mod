@@ -113,6 +113,13 @@ SMODS.Joker {
   end
 }
 
+SMODS.Atlas {
+  key = "stock_sprite",
+  path = "stock.png",
+  px = 35,
+  py = 47,
+}
+
 SMODS.Enhancement {
   key = "stock",
   loc_txt = {
@@ -121,6 +128,13 @@ SMODS.Enhancement {
       "Gives bonus chips to your card based on your wallet."
     }
   },
+
+  atlas = "stock_sprite",
+  pos = {
+    x = 0,
+    y = 0
+  },
+  
   calculate = function(self, card, context)
     if context.cardarea == G.play and context.main_scoring then
       return {
@@ -128,15 +142,32 @@ SMODS.Enhancement {
       }
     end
   end
-}assets/ai_joker.png
+}
+
+SMODS.Atlas {
+  key = "investor_tarot_sprite",
+  path = "investor_tarot.png",
+  px = 100,
+  py = 150,
+}
+
+SMODS.Consumable {
+  key = "Investor_Tarot",
   set = "Tarot",
 
   loc_txt = {
-    name = "Stock Tarot",
+    name = "Investor Tarot",
     text = {
       "Gives bonus chips to your card based on your wallet."
     }
   },
+
+  atlas = "investor_tarot_sprite",
+  pos = {
+    x = 0,
+    y = 0
+  },
+
   rarity = 1,
   cost = 3,
   can_use = function(self, card)
@@ -171,7 +202,7 @@ end
 
 local function give_consumable(key)
   local card = create_card(
-    "Stock_tarot",
+    "investor_tarot",
     G.consumeables,
     nil,
     nil,
@@ -205,7 +236,7 @@ G.FUNCS.nwm_give_stock = function()
         print("FOUND:", key, center)
     end
 end
-  give_consumable("c_nwm_Stock_tarot")
+  give_consumable("c_nwm_Investor_Tarot")
 end
 
 G.FUNCS.nwm_add_money = function()
