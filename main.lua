@@ -1,3 +1,10 @@
+SMODS.Atlas {
+  key = "trader_joker_sprite",
+  path = "trader_joker.png",
+  px = 36,
+  py = 47,
+}
+
 SMODS.Joker {
   key = "Trader",
   loc_txt = {
@@ -6,6 +13,12 @@ SMODS.Joker {
       "Sometimes market is bullish,",
       "sometimes bearish."
     }
+  },
+
+  atlas = "trader_joker_sprite",
+  pos = {
+    x = 0,
+    y = 0
   },
 
   rarity = 2,
@@ -24,7 +37,7 @@ SMODS.Atlas {
   key = "s&p_sprite",
   path = "jokersmp.png",
   px = 36,
-  py = 56,
+  py = 47,
 }
 
 SMODS.Joker {
@@ -36,6 +49,7 @@ SMODS.Joker {
       "at the end of each round."
     }
   },
+
   atlas = "s&p_sprite",
   pos = {
     x = 0,
@@ -65,6 +79,13 @@ SMODS.Joker {
   end
 }
 
+SMODS.Atlas {
+  key = "invest_in_ai_sprite",
+  path = "ai_joker.png",
+  px = 36,
+  py = 47,
+}
+
 SMODS.Joker {
   key = "Invest_in_AI",
   loc_txt = {
@@ -74,7 +95,14 @@ SMODS.Joker {
       "you must pay $10 to your AI overlords."
     },
   },
-  rarity = 4,
+
+  atlas = "invest_in_ai_sprite",
+  pos = {
+    x = 0,
+    y = 0
+  },
+
+  rarity = 3,
   cost = 0,
   calculate = function(self, card, context)
     if context.setting_blind and not context.repetition and not context.individual then
@@ -100,10 +128,7 @@ SMODS.Enhancement {
       }
     end
   end
-}
-
-SMODS.Consumable {
-  key = "Stock_tarot",
+}assets/ai_joker.png
   set = "Tarot",
 
   loc_txt = {
