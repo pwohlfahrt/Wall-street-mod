@@ -20,6 +20,13 @@ SMODS.Joker {
   end
 }
 
+SMODS.Atlas {
+  key = "s&p_sprite",
+  path = "jokersmp.png",
+  px = 36,
+  py = 56,
+}
+
 SMODS.Joker {
   key = "S&P",
   loc_txt = {
@@ -28,6 +35,11 @@ SMODS.Joker {
       "Returns 10% of your net worth",
       "at the end of each round."
     }
+  },
+  atlas = "s&p_sprite",
+  pos = {
+    x = 0,
+    y = 0
   },
   rarity = 1,
   cost = 3,
@@ -59,7 +71,7 @@ SMODS.Joker {
     name = "Invest in AI",
     text = {
       "At beginning of each round,",
-      "your must pay $10 to your AI overlords."
+      "you must pay $10 to your AI overlords."
     },
   },
   rarity = 4,
